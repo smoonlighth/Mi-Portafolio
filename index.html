@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi portafolio</title>
+    <link rel="stylesheet" href="style.css"> 
+    
+</head>
+<body>
+<header class="header">
+  <div class="menu container">
+    <label for="menu" class="menu-label">
+      <img src="fotos/menu.png" class="menu-icono" alt="">
+  </label>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#Inicio">Inicio</a></li>
+                <li><a href="#Sobre Mi">Sobre Mi</a></li>
+                <li><a href="#Contáctame">Contáctame</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div id="Inicio">
+    <img src="fotos/inicio3.png" height="650" width="1300"/> 
+</div>
+
+<div id="SobreMi">
+    <br><h2>Sobre Mi</h2>
+    <p>¡Hola! Me llamo Sabrina, tengo 19 años y soy de Canelones, Uruguay.</p>
+    <p>Soy técnica en Turismo, mi interés por este rubro surgió cuando tenía 15 años, lo que me llevó a cursar el bachillerato tecnológico en la UTU.</p>
+    <p>Terminé el bachillerato en 2022 y me anoté en el Instituto Turístico Hotelero del Uruguay (ITHU), del cual me gradué como técnica en diciembre del 2023.</p>
+    <p>Luego de terminar la carrera tuve la oportunidad de hacer una pasantía en el Ministerio de Turismo (<a href="#slider-4">abajo</a> te cuento un poco más).</p>
+    <p>Este año me inscribí en Jóvenes a Programar, actualmente estoy estudiando Desarrollo Web, lo cual me apasiona. Espero crecer en el mundo TI y poder fusionar mis conocimientos en turismo y desarrollo para poder vivir de crear plataformas relacionadas a los viajes.</p><br>
+</div>
+
+<section id="container">
+    <div class="slider-wrapper">
+      <div class="slider">
+        <img
+          src="./fotos/educación.png"
+          id="slider-1"
+          alt="educación"
+          class="image"
+        />
+        <img
+          src="./fotos/idiomas.png"
+          id="slider-2"
+          alt="idiomas"
+          class="image"/>
+
+        <img src="/fotos/habilidades.png"
+          id="slider-3"
+          alt="habilidades" 
+          class="image"/>
+
+        <img src="./fotos/experiencia.png"
+         id="slider-4"
+        alt="experiencia" 
+        class="image" />
+      </div>
+
+      <div class="slider-nav">
+        <a href="#slider-1" class="slider-button"></a>
+        <a href="#slider-2" class="slider-button"></a>
+        <a href="#slider-3" class="slider-button"></a>
+        <a href="#slider-4" class="slider-button"></a>
+      </div>
+    </div>
+  </section>
+
+  <div id="Contáctame">
+    <h2>Contáctame</h2>
+    <form>
+      <label for="nombre">Nombre</label>
+      <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre"/>
+  
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="Escribe un email válido" required/>
+      
+      <label for="asunto">Asunto</label>
+      <input type ="text" name="asunto" id="asunto" placeholder="Asunto"/>
+      
+      <label for="mensaje">Mensaje</label>
+      <textarea name="mensaje" for="mensaje" placeholder="Escribe un mensaje" maxlength="300"></textarea>
+      
+      <input type="submit" name="enviar" value="Enviar"/>
+  </form>
+  </div>
+
+</body>
+</html>

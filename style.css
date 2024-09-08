@@ -222,7 +222,7 @@ textarea{
 }
 
 /* Estilos para pantallas pequeñas (móviles) */
-@media(max-width:408px) {
+@media(max-width:500px) {
   body {
     font-size: 15px;
   }

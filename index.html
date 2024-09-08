@@ -8,19 +8,21 @@
     
 </head>
 <body>
-<header class="header">
-  <div class="menu container">
-    <label for="menu" class="menu-label">
-      <img src="fotos/menu.png" class="menu-icono" alt="">
-  </label>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#Inicio">Inicio</a></li>
-                <li><a href="#Sobre Mi">Sobre Mi</a></li>
-                <li><a href="#Contáctame">Contáctame</a></li>
+<header>
+      <nav class="navbar">
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#Inicio">Inicio</a></li>
+                <li class="nav-item"><a href="#SobreMi">Sobre Mi</a></li>
+                <li class="nav-item"><a href="#Contáctame">Contáctame</a></li>
             </ul>
-        </nav>
-    </div>
+    
+        <div class="hamburguesa">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+    </nav>
+    <script src="script.js"></script>
 </header>
 
 <div id="Inicio">
@@ -29,7 +31,7 @@
 
 <div id="SobreMi">
     <br><h2>Sobre Mi</h2>
-    <p>¡Hola! Me llamo Sabrina, tengo 19 años y soy de Canelones, Uruguay.</p>
+    <p>¡Hola! Me llamo Sabrina, tengo 20 años y soy de Canelones, Uruguay.</p>
     <p>Soy técnica en Turismo, mi interés por este rubro surgió cuando tenía 15 años, lo que me llevó a cursar el bachillerato tecnológico en la UTU.</p>
     <p>Terminé el bachillerato en 2022 y me anoté en el Instituto Turístico Hotelero del Uruguay (ITHU), del cual me gradué como técnica en diciembre del 2023.</p>
     <p>Luego de terminar la carrera tuve la oportunidad de hacer una pasantía en el Ministerio de Turismo (<a href="#slider-4">abajo</a> te cuento un poco más).</p>
@@ -51,7 +53,7 @@
           alt="idiomas"
           class="image"/>
 
-        <img src="/fotos/habilidades.png"
+        <img src="fotos/habilidades.png"
           id="slider-3"
           alt="habilidades" 
           class="image"/>
@@ -89,6 +91,15 @@
       <input type="submit" name="enviar" value="Enviar"/>
   </form>
   </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4"></div>
+    </div>
+  </div>
+  
 
 </body>
 </html>

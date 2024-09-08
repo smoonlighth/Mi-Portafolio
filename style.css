@@ -15,50 +15,61 @@
 
 header {
 background-color: #B1A1E2;
-  height: 70px;
+  height: 50px;
   display: flex;
+  position: fixed; 
+  top: 0;          
+  left: 0;         
+  width: 100%;     
+  z-index: 1000;
   justify-content: space-between;
 }
 
-.menu {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  right: 0;
+li {
+  list-style: none;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.navbar {
+  min-height: 50px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  padding: 24px;
+}
+
+.navbar ul li a:hover {
+  color: rgb(68, 5, 68);
+}
+
+.nav-menu {
+  display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
 
-.menu .navbar ul li {
-position: relative;
-float: left;
+.nav-link {
+  transition: 0.7s ease;
 }
 
-.menu .navbar ul li a {
-  font-size: 18px;
-  font-weight: 600;
-  padding: 20px;
-  color: #DEDEDE;
-  display: block;
-  margin-top: 20px;
-}
-
-.menu .navbar ul li a:hover {
-color: rgb(0, 0, 0);
-}
-
-#menu {
+.hamburguesa {
   display: none;
-}
-
-.menu-icono {
-  width: 25px;
-}
-
-.menu-label {
   cursor: pointer;
-  display: none;
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: white;
 }
 
 
@@ -77,7 +88,7 @@ color: rgb(0, 0, 0);
 h2 {
   font-size: xx-large;
   font-style: oblique;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   color: rgb(0, 0, 0);
   background-color: #dccfec; 
   margin-bottom: 15px;
@@ -94,6 +105,7 @@ h2 {
   color: rgb(0, 0, 0);
   background-color: #dccfec;
   justify-content: baseline;
+  font-family: sans-serif;
   }
 
   p a {
@@ -148,6 +160,7 @@ h2 {
 }
 
 #Contáctame {
+  padding: 40px;
   margin-top: 200px;
   text-align: center;
   color: rgb(0, 0, 0);
@@ -166,7 +179,7 @@ form{
 form label{
 	width:72px;
 	font-weight:bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: sans-serif;
   background-color: #B1A1E2;
 	display:inline-block;
 }
@@ -206,4 +219,175 @@ textarea{
 	margin:8px 0;
 	resize:none;
 	display:block;
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media(max-width:408px) {
+  body {
+    font-size: 15px;
+  }
+  header {
+    height: 50px;
+    background-color: #dccfec;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;
+  }
+  .hamburguesa {
+      display: block;
+      position: fixed;
+      background-color: #dccfec;
+  }
+
+  .hamburguesa.active .bar:nth-child(2){
+      opacity: 0;
+  }
+  .hamburguesa.active .bar:nth-child(1){
+      transform: translateY(8px) rotate(45deg);
+  }
+  .hamburguesa.active .bar:nth-child(3){
+      transform: translateY(-8px) rotate(-45deg);
+  }
+  .nav-menu {
+      position: fixed; 
+      left: -100%;
+      top: 50px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #dccfec;
+      width: 100%;
+      text-align: center;
+      transition: 0.3s;
+  }
+
+  .navbar{
+    background-color: #dccfec;
+    height: 50px;
+  }
+
+  .nav-link {
+      margin: 16px 0;
+  }
+
+  .nav-menu.active {
+      left: 0;
+  }
+
+  .nav-item{
+    background-color: #dccfec;
+    font-family: sans-serif;
+    font-size: larger;
+    padding: 20px;
+   }
+  
+   .nav-item a{
+    background-color: #dccfec;
+   }
+   
+   .slider-nav {
+    background-color: #dccfec;
+   }
+  }
+  
+/* Estilos para pantallas medianas (tabletas) */
+@media (min-width: 408px) and (max-width: 1024px) {
+  body {
+    font-size: 15px;
+  }
+
+  header {
+    background-color: #dccfec;
+    height: 50px;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;
+  }
+
+  .hamburguesa {
+    display: block;
+    position: fixed;
+    background-color: #dccfec;
+}
+
+.hamburguesa.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburguesa.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburguesa.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+}
+.nav-menu {
+    position: fixed; 
+    left: -100%;
+    top: 50px;
+    gap: 0;
+    flex-direction: column;
+    background-color: #dccfec;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.navbar{
+  background-color: #dccfec;
+  height: 50px;
+}
+
+.nav-link {
+    margin: 16px 0;
+}
+
+.nav-menu.active {
+    left: 0;
+}
+ .nav-item{
+  background-color: #dccfec;
+  font-family: sans-serif;
+  font-size: larger;
+  padding: 20px;
+ }
+
+ .nav-item a{
+  background-color: #dccfec;
+ }
+
+}
+
+/* Estilos para pantallas grandes (escritorios) */
+@media (min-width: 1025px) {
+  body {
+    font-size: 16px;
+    font-family: sans-serif;
+  }
+
+  header {
+    height: 50px;
+    width: 100%;
+  }
+}
+p a {
+  background-color: #dccfec;
+  color: rgb(135, 31, 255);
+  
+}
+
+#SobreMi {
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
